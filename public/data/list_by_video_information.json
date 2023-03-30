@@ -1,0 +1,71 @@
+{
+	"kind": "youtube#videoListResponse",
+	"etag": "R9ZtLefU8SCAUapB-9i-KzhpHDk",
+	"items": [
+		{
+			"kind": "youtube#video",
+			"etag": "TE6Ac7S5SnDEEt4NXoE9H0Y3UZI",
+			"id": "5z3LQkxR3y4",
+			"snippet": {
+				"publishedAt": "2023-03-22T10:00:04Z",
+				"channelId": "UCUj6rrhMTR9pipbAWBAMvUQ",
+				"title": "또 돌아온 판사 침착맨의 양형 체험 프로그램",
+				"description": "▶관련 영상\n  •돌아온 판사 침착맨의 양형 체험 프로그램: https://youtu.be/xcSmfXq1WOQ\n\n▶관련 재생목록\n  •침착맨의 일상재롱: https://goo.gl/OJ4Uoa\n\n▶생방송 원본\n  •2023년 3월 6일 방송분: https://www.youtube.com/live/XNmt8L8ozXg\n\n#침착맨 #판사 #양형체험",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/5z3LQkxR3y4/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/5z3LQkxR3y4/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/5z3LQkxR3y4/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					},
+					"standard": {
+						"url": "https://i.ytimg.com/vi/5z3LQkxR3y4/sddefault.jpg",
+						"width": 640,
+						"height": 480
+					},
+					"maxres": {
+						"url": "https://i.ytimg.com/vi/5z3LQkxR3y4/maxresdefault.jpg",
+						"width": 1280,
+						"height": 720
+					}
+				},
+				"channelTitle": "침착맨",
+				"categoryId": "24",
+				"liveBroadcastContent": "none",
+				"localized": {
+					"title": "또 돌아온 판사 침착맨의 양형 체험 프로그램",
+					"description": "▶관련 영상\n  •돌아온 판사 침착맨의 양형 체험 프로그램: https://youtu.be/xcSmfXq1WOQ\n\n▶관련 재생목록\n  •침착맨의 일상재롱: https://goo.gl/OJ4Uoa\n\n▶생방송 원본\n  •2023년 3월 6일 방송분: https://www.youtube.com/live/XNmt8L8ozXg\n\n#침착맨 #판사 #양형체험"
+				},
+				"defaultAudioLanguage": "ko"
+			},
+			"contentDetails": {
+				"duration": "PT1H2M7S",
+				"dimension": "2d",
+				"definition": "hd",
+				"caption": "false",
+				"licensedContent": true,
+				"contentRating": {},
+				"projection": "rectangular"
+			},
+			"statistics": {
+				"viewCount": "354617",
+				"likeCount": "3715",
+				"favoriteCount": "0",
+				"commentCount": "452"
+			}
+		}
+	],
+	"pageInfo": {
+		"totalResults": 1,
+		"resultsPerPage": 1
+	}
+}
