@@ -6,12 +6,18 @@ import { RiVideoUploadLine } from 'react-icons/ri';
 import { AiOutlineBell } from 'react-icons/ai';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import Profile from './Profile';
+import { useNavigate } from 'react-router-dom';
 
 export default function NavBar() {
 	const [keyword, setKeyword] = useState('');
 	// const { isLoading, error, data } = useQuery(['search', keyword], async () => {
 	// 	return fetch(`data/list_by_keyword.json`).then((res) => res.json());
 	// });
+	const navigate = useNavigate();
+	const onClickLogo = (e) => {
+		e.preventDefault();
+		navigate(`/`);
+	};
 
 	const onChangeHandler = (e) => {
 		setKeyword(e.target.value);
@@ -26,7 +32,7 @@ export default function NavBar() {
 		<div className='flex justify-between h-16 px-5'>
 			<div className='flex items-center gap-x-3'>
 				<RxHamburgerMenu size='24' />
-				<div className='flex items-center'>
+				<div className='flex items-center cursor-pointer' onClick={onClickLogo}>
 					<Logo />
 					<span className='font-logo text-xl text-base-light'>YouTube</span>
 				</div>
