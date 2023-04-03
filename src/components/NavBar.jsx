@@ -10,9 +10,6 @@ import { useNavigate } from 'react-router-dom';
 
 export default function NavBar() {
 	const [keyword, setKeyword] = useState('');
-	// const { isLoading, error, data } = useQuery(['search', keyword], async () => {
-	// 	return fetch(`data/list_by_keyword.json`).then((res) => res.json());
-	// });
 	const navigate = useNavigate();
 	const onClickLogo = (e) => {
 		e.preventDefault();
@@ -23,9 +20,14 @@ export default function NavBar() {
 		setKeyword(e.target.value);
 	};
 
-	const onClickHandler = (e) => {
-		e.preventDefault();
-		setKeyword('');
+	const onClickHandler = () => {
+		navigate(`/search/${keyword}`);
+	};
+
+	const keyPressHandler = (e) => {
+		if (e.key === 'Enter') {
+			onClickHandler();
+		}
 	};
 
 	return (
@@ -39,7 +41,7 @@ export default function NavBar() {
 			</div>
 			<div className='flex items-center gap-x-5 w-2/5'>
 				<div className='flex items-center border border-border-light rounded-full pl-4 w-full h-10 justify-between overflow-hidden'>
-					<input type='text' className='w-72 focus:outline-none' placeholder='검색' value={keyword} onChange={onChangeHandler} />
+					<input type='text' className='w-72 focus:outline-none' placeholder='검색' value={keyword} onChange={onChangeHandler} onKeyPress={keyPressHandler} />
 					<button className='px-5 h-10 border-l border-border-light bg-slate-100 hover:bg-slate-200' onClick={onClickHandler}>
 						<BsSearch size='20' />
 					</button>
