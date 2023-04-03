@@ -6,8 +6,7 @@ export default function HomeVideo({ video }) {
 	const navigate = useNavigate();
 	const { data: channel } = useQuery(['channel', video?.id], async () => {
 		const res = await fetch(
-			// `https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${video.snippet.channelId}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
-			`data/list_by_channel_information.json`
+			`https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${video.snippet.channelId}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
 		);
 		const json = await res.json();
 		return json;

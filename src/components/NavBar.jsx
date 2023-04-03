@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { useQuery } from '@tanstack/react-query';
 import { Logo } from './icons/Logo';
-import { BsSearch, BsFillMicFill, BsKeyboardFill } from 'react-icons/bs';
+import { BsSearch, BsFillMicFill } from 'react-icons/bs';
 import { RiVideoUploadLine } from 'react-icons/ri';
 import { AiOutlineBell } from 'react-icons/ai';
 import { RxHamburgerMenu } from 'react-icons/rx';

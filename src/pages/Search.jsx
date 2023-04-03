@@ -10,7 +10,7 @@ export default function Search() {
 
 	useEffect(() => {
 		setIsLoading(true);
-		fetch(`data/list_by_keyword.json`)
+		fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${keyword}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
 			.then((res) => res.json())
 			.then((data) => setVideos(data.items))
 			.finally(() => setIsLoading(false));

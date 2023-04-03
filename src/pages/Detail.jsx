@@ -11,15 +11,13 @@ export default function Detail() {
 	const [channel, setChannel] = useState();
 	useEffect(() => {
 		fetch(
-			// `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
-			`data/list_by_video_information.json`
+			`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
 		)
 			.then((res) => res.json())
 			.then((data) => {
 				setVideo(data.items[0]);
 				fetch(
-					// `https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${data.items[0].snippet.channelId}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
-					`data/list_by_channel_information.json`
+					`https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${data.items[0].snippet.channelId}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
 				)
 					.then((res) => res.json())
 					.then((data) => {
@@ -36,8 +34,7 @@ export default function Detail() {
 
 	const { data: relatedVideos } = useQuery(['relatedVideos', videoId], async () => {
 		return await fetch(
-			// `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&relatedToVideoId=${videoId}&type=video&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
-			`data/list_by_related_video.json`
+			`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&relatedToVideoId=${videoId}&type=video&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
 		).then((res) => res.json());
 	});
 
